@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">LinX</string>
+    <string name="mgdllc">Mobile Generation Development</string>
+    <string name="action_settings">Settings</string>
+    <string name="app_version">3.0</string>
+    <string name="about_dialog_developed_by_as_link">MGD LLC</string>
+    <string name="about_dialog_copyright">All Rights Reserved2014 MGD LLC</string>
+    <string name="about_dialog_build_version">3.0/2</string>
+    <string name="desc">\nYour link to</string>
+
+</resources>
