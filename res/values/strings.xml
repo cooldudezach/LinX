@@ -8,6 +8,5 @@
     <string name="about_dialog_developed_by_as_link">MGD LLC</string>
     <string name="about_dialog_copyright">All Rights Reserved2014 MGD LLC</string>
     <string name="about_dialog_build_version">3.0/2</string>
-    <string name="desc">\nYour link to</string>
-
+    <string name="image">Thumbnail</string>
 </resources>

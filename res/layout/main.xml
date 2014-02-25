@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    xmlns:android="http://schemas.android.com/apk/res/android"
     android:background="@drawable/background">
 
     <ImageView
@@ -12,7 +12,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="-15dp"
         android:layout_marginBottom="-35dp"
-        android:src="@drawable/mgdllc_logo"/>
+        android:src="@drawable/mgdllc_logo" />
 
     <ListView
         android:layout_width="fill_parent"
@@ -24,6 +24,6 @@
         android:paddingBottom="10dp"
         android:layout_margin="10dp"
         android:divider="#fff"
-        android:dividerHeight="1dp"/>
+        android:dividerHeight="1dp" />
 
 </LinearLayout>
