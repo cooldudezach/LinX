@@ -30,4 +30,5 @@
         android:paddingLeft="10dp"
         android:textColor="#000"
         android:textSize="14dp" />
+
 </RelativeLayout>

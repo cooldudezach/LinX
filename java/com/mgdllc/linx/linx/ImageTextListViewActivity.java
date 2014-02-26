@@ -21,19 +21,31 @@ public class ImageTextListViewActivity extends Activity implements
             "UnleashedPrepaids",
             "Unleashed @ Facebook",
             "ROMz",
-            "About MGD LLC" };
+            "PlayfulGod's Play Store",
+            "Degenerate Droid Development"
+    };
 
     public static final String[] descriptions = new String[] {
-            "Your link to MGD's Facebook page.",
-            "Your link to MGD on the Google Play Store.",
-            "Your link to MGD-LLC.com.",
-            "Your link to Unleashed Prepaids",
-            "Your link to UPP's Facebook page.",
+            "MGDLLC on Facebook.",
+            "MGDLLC on the Google Play Store.",
+            "Mobile Generation Development.",
+            "Home for Unleashed Prepaids.",
+            "UPP's Facebook page.",
             "Your link to ROMz",
-            "About Mobile Generation Development" };
+            "PlayfulGod Play Store",
+            "DDD Google Play Store"
+    };
 
-    public static final Integer[] images = { R.drawable.mgdllc_icon,
-            R.drawable.mgdllc_icon, R.drawable.mgdllc_icon, R.drawable.mgdllc_fb_icon, R.drawable.upp_icon, R.drawable.upp_fb_icon, R.drawable.romz_icon, R.drawable.ic_menu_about };
+    public static final Integer[] images = {
+            R.drawable.mgdllc_icon,
+            R.drawable.mgdllc_icon,
+            R.drawable.mgdllc_icon,
+            R.drawable.mgdllc_fb_icon,
+            R.drawable.upp_icon,
+            R.drawable.upp_fb_icon,
+            R.drawable.romz_icon,
+            R.drawable.ic_menu_about
+    };
 
     ListView listView;
     List<RowItem> rowItems;
@@ -65,5 +77,6 @@ public class ImageTextListViewActivity extends Activity implements
                 Toast.LENGTH_SHORT);
         toast.setGravity(Gravity.BOTTOM| Gravity.CENTER_HORIZONTAL, 0, 0);
         toast.show();
+
     }
 }

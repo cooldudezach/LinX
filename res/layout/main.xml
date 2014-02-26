@@ -26,4 +26,11 @@
         android:divider="#fff"
         android:dividerHeight="1dp" />
 
+    <WebView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/webView"
+        android:layout_gravity="right" />
+
+
 </LinearLayout>
