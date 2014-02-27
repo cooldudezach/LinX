@@ -85,15 +85,27 @@ public class ImageTextListViewActivity extends Activity implements
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position,
                             long id) {
-        Intent mWebView = new Intent(this, linx_WebViewClient.class);
-        mWebView.putExtra("URL", rowItems.get(position).getURL());
-        startActivity(mWebView);
-
-        /*Toast toast = Toast.makeText(getApplicationContext(),
-                "Item " + (position + 1) + ": " + rowItems.get(position),
-                Toast.LENGTH_SHORT);
-        toast.setGravity(Gravity.BOTTOM| Gravity.CENTER_HORIZONTAL, 0, 0);
-        toast.show();*/
-
+        String itemURL = rowItems.get(position).getURL();
+        String[] parts = itemURL.split("://");
+        
+        if(parts[0] == "market") {
+                try {
+                        startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(itemURL)));
+                } catch (android.content.ActivityNotFoundException anfe) {
+                        Intent mWebView = new Intent(this, linx_WebViewClient.class);
+                        mWebView.putExtra("URL", "http://play.google.com/store/apps/" + parts[1]);
+                        startActivity(mWebView);
+                }
+        } else {
+                Intent mWebView = new Intent(this, linx_WebViewClient.class);
+                mWebView.putExtra("URL", itemURL);
+                startActivity(mWebView);
+        
+                /*Toast toast = Toast.makeText(getApplicationContext(),
+                        "Item " + (position + 1) + ": " + rowItems.get(position),
+                        Toast.LENGTH_SHORT);
+                toast.setGravity(Gravity.BOTTOM| Gravity.CENTER_HORIZONTAL, 0, 0);
+                toast.show();*/
+        }
     }
 }
