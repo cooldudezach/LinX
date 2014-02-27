@@ -39,7 +39,7 @@ public class ImageTextListViewActivity extends Activity implements
     };
 
     public static final String[] urls = new String[] {
-            "https://m.facebook.com/pages/Mobile-Generation-Development",
+            "https://m.facebook.com/MobileGenerationDevelopment",
             "https://play.google.com/store/apps/developer?id=Mobile%20Generation%20Development%20LLC&hl=en",
             "http://mgd-llc.com",
             "http://unleashedprepaids.com",
@@ -89,12 +89,11 @@ public class ImageTextListViewActivity extends Activity implements
         mWebView.putExtra("URL", rowItems.get(position).getURL());
         startActivity(mWebView);
 
-
-        Toast toast = Toast.makeText(getApplicationContext(),
+        /*Toast toast = Toast.makeText(getApplicationContext(),
                 "Item " + (position + 1) + ": " + rowItems.get(position),
                 Toast.LENGTH_SHORT);
         toast.setGravity(Gravity.BOTTOM| Gravity.CENTER_HORIZONTAL, 0, 0);
-        toast.show();
+        toast.show();*/
 
     }
 }

@@ -25,7 +25,7 @@ public class linx_WebViewClient extends Activity {
         WebSettings webSettings = mWebView.getSettings();
         webSettings.setJavaScriptEnabled(true);
         mWebView.setWebViewClient(new WebViewClient());
-        mWebView.loadUrl("urls");
+        mWebView.loadUrl(urls);
 
     }
 
