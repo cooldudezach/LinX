@@ -6,10 +6,11 @@ public class RowItem {
     private String desc;
     private String url;
 
-    public RowItem(int imageId, String title, String desc) {
+    public RowItem(int imageId, String title, String desc, String url) {
         this.imageId = imageId;
         this.title = title;
         this.desc = desc;
+        this.url = url
     }
     public int getImageId() {
         return imageId;
