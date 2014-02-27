@@ -3,6 +3,8 @@ package com.mgdllc.linx.linx;
 import java.util.ArrayList;
 import java.util.List;
 import android.app.Activity;
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.Gravity;
 import android.view.View;
@@ -36,6 +38,17 @@ public class ImageTextListViewActivity extends Activity implements
             "DDD Google Play Store"
     };
 
+    public static final String[] urls = new String[] {
+            "https://m.facebook.com/pages/Mobile-Generation-Development",
+            "https://play.google.com/store/apps/developer?id=Mobile%20Generation%20Development%20LLC&hl=en",
+            "http://mgd-llc.com",
+            "http://unleashedprepaids.com",
+            "https://m.facebook.com/UnleashedPrepaids",
+            "https://m.facebook.com/mgdllcfl",
+            "https://play.google.com/store/apps/developer?id=PlayfulGod",
+            "https://play.google.com/store/apps/developer?id=Degenerate+Droid+Development"
+    };
+
     public static final Integer[] images = {
             R.drawable.mgdllc_icon,
             R.drawable.mgdllc_icon,
@@ -58,7 +71,7 @@ public class ImageTextListViewActivity extends Activity implements
 
         rowItems = new ArrayList<RowItem>();
         for (int i = 0; i < titles.length; i++) {
-            RowItem item = new RowItem(images[i], titles[i], descriptions[i]);
+            RowItem item = new RowItem(images[i], titles[i], descriptions[i], urls[i]);
             rowItems.add(item);
         }
 
@@ -72,6 +85,11 @@ public class ImageTextListViewActivity extends Activity implements
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position,
                             long id) {
+        Intent mWebView = new Intent(this, linx_WebViewClient.class);
+        mWebView.putExtra("URL", rowItems.get(position).getURL());
+        startActivity(mWebView);
+
+
         Toast toast = Toast.makeText(getApplicationContext(),
                 "Item " + (position + 1) + ": " + rowItems.get(position),
                 Toast.LENGTH_SHORT);

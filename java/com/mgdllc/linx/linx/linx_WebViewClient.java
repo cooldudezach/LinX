@@ -15,11 +15,17 @@ public class linx_WebViewClient extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_webview);
 
+        String urls = "";
+        Bundle extras = getIntent().getExtras();
+        if (extras != null) {
+            urls = extras.getString("URL");
+        }
+
         mWebView = (WebView) findViewById(R.id.webView);
         WebSettings webSettings = mWebView.getSettings();
         webSettings.setJavaScriptEnabled(true);
         mWebView.setWebViewClient(new WebViewClient());
-        mWebView.loadUrl("http://mgd-llc.com");
+        mWebView.loadUrl("urls");
 
     }
 
