@@ -84,7 +84,7 @@ public class ImageTextListViewActivity extends Activity implements
     public void onItemClick(AdapterView<?> parent, View view, int position,
                             long id) {
         Intent mWebView = new Intent(this, linx_WebViewClient.class);
-        intent.putExtra("URL", view.getURL());
+        intent.putExtra("URL", rowItems.get(position).getURL());
         startActivity(mWebView);
     }
 }
