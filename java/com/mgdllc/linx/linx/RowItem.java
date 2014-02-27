@@ -4,6 +4,7 @@ public class RowItem {
     private int imageId;
     private String title;
     private String desc;
+    private String url;
 
     public RowItem(int imageId, String title, String desc) {
         this.imageId = imageId;
@@ -22,6 +23,12 @@ public class RowItem {
     public void setDesc(String desc) {
         this.desc = desc;
     }
+    public String getURL() {
+        return url;
+    }
+    public void setURL(String url) {
+        this.url = url;
+    }
     public String getTitle() {
         return title;
     }
@@ -31,6 +38,6 @@ public class RowItem {
 
     @Override
     public String toString() {
-        return title + "\n" + desc;
+        return title + "\n" + desc + "\n" + url;
     }
 }
