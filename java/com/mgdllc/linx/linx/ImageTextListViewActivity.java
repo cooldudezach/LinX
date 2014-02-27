@@ -36,6 +36,17 @@ public class ImageTextListViewActivity extends Activity implements
             "DDD Google Play Store"
     };
 
+    public static final String[] urls = new String[] {
+            "http://www.google.com",
+            "http://www.google.com",
+            "http://www.google.com",
+            "http://www.google.com",
+            "http://www.google.com",
+            "http://www.google.com",
+            "http://www.google.com",
+            "http://www.google.com",
+    };
+
     public static final Integer[] images = {
             R.drawable.mgdllc_icon,
             R.drawable.mgdllc_icon,
@@ -58,7 +69,7 @@ public class ImageTextListViewActivity extends Activity implements
 
         rowItems = new ArrayList<RowItem>();
         for (int i = 0; i < titles.length; i++) {
-            RowItem item = new RowItem(images[i], titles[i], descriptions[i]);
+            RowItem item = new RowItem(images[i], titles[i], descriptions[i], urls[i]);
             rowItems.add(item);
         }
 
@@ -72,11 +83,8 @@ public class ImageTextListViewActivity extends Activity implements
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position,
                             long id) {
-        Toast toast = Toast.makeText(getApplicationContext(),
-                "Item " + (position + 1) + ": " + rowItems.get(position),
-                Toast.LENGTH_SHORT);
-        toast.setGravity(Gravity.BOTTOM| Gravity.CENTER_HORIZONTAL, 0, 0);
-        toast.show();
-
+        Intent mWebView = new Intent(this, linx_WebViewClient.class);
+        intent.putExtra("URL", view.getURL());
+        startActivity(mWebView);
     }
 }
